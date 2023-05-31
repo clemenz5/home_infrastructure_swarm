@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  reverse-proxy:
+    image: nginx:latest
+    container_name: reverse
+    ports:
+      - "88:88"
+    volumes:
+      - .nginxconf:/etc/nginx
+    networks:
+      - f-net
+
+networks:
+  f-net:
+    name: f-net
+    driver: bridge
+

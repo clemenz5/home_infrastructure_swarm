@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  test:
+    image: nginx:latest
+    hostname: test
+    container_name: test
+    networks:
+      - f-net
+    restart: on-failure:5
+    volumes:
+      - ./website/:/usr/share/nginx/html:ro
+networks:
+  f-net:
+    name: f-net
+    driver: bridge
