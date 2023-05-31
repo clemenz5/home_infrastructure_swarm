@@ -13,5 +13,5 @@ services:
 networks:
   f-net:
     name: f-net
-    driver: bridge
+    driver: overlay
 
