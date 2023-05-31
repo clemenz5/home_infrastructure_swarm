@@ -8,10 +8,10 @@ services:
     volumes:
       - .nginxconf:/etc/nginx
     networks:
-      - f-net
+      - front  
 
 networks:
-  f-net:
-    name: f-net
+  front:
+    name: front
     driver: overlay
 

@@ -5,11 +5,10 @@ services:
     hostname: test
     container_name: test
     networks:
-      - f-net
+      - front
     restart: on-failure:5
     volumes:
       - ./website/:/usr/share/nginx/html:ro
 networks:
-  f-net:
-    name: f-net
-    driver: bridge
+  front:
+    external: true
